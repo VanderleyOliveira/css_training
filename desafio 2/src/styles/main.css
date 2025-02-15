@@ -1,0 +1,119 @@
+:root {
+    --text-primary-color: #000;
+    --text-secondary-color: #515151;
+    --text-tertiary-color: #fff;
+    --btn-primary-color: #CC0000;
+    --btn-secondary-color: #F8F8F8;
+    --border-color: #CCCCCC;
+}
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 24px;
+}
+
+/* lado esquerdo do menu */
+
+#menu .left {
+    display: flex;
+    justify-items: center;
+    gap: 32px;
+}
+
+#menu .left .logo-youtube {
+    width: 90px;
+}
+
+/* centro do menu */
+#menu .center {
+    display: flex;
+    border: 1px solid var(--border-color);
+}
+
+#menu .center input {
+    width: 348px;
+    padding: 8px;
+    border: none;
+}
+
+#menu .center .btn-search {
+    background-color: var(--btn-secondary-color);
+    border-left: 1px solid var(--border-color);
+    padding: 8px 19px 8px 14px;
+}
+
+/* lado direito do menu */
+#menu .right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* Estilo de Watching Video (div esquerda) */
+#watching__section {
+    margin-top: 28px;
+    margin-left: 75px;
+}
+
+.watching-video {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 952px;
+}
+
+.watching-video h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* div com botões de ações */
+.video-actions {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+
+.video-actions span {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    color: var(--text-primary-color);
+}
+
+.video-actions .channe-infos {
+    display: flex;
+    gap: 12px;
+}
+
+.video-actions .channe-infos p {
+    color: var(--text-secondary-color);
+    font-weight: 600;
+}
+
+.subscribe-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    color: var(--text-tertiary-color);
+    background-color: var(--btn-primary-color);
+
+    width: 159px;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.like, .deslike, .share, .download {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Estilo para div de Sugestões de Vídeos */
+.recommendations-videos {
+    
+}
