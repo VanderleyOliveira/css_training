@@ -94,13 +94,12 @@ section#watching__section {
     color: var(--text-primary-color);
 }
 
-.video-actions .channe-infos {
+.video-actions .channel-infos {
     display: flex;
     gap: 12px;
 }
 
-.video-actions .channe-infos p {
-    align-content: center;
+.video-actions .channel-infos p {
     font-size: 14px;
     font-weight: 600;
     color: var(--text-secondary-color);
