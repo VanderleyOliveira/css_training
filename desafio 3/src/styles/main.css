@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+:root {
+    --bg-primary-color: #F9F9F9;
+    --bg-secondary-color: #FFFFFF;
+    --text-primary-color: #000;
+    --text-secondary-color: #515151;
+    --btn-color: #F8F8F8;
+    --border-color: #CCCCCC;
+}
+
+body {
+    background-color: var(--bg-primary-color);
+    height: 100dvh;
+
+    display: grid;
+    grid-template-columns: 218px 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+/* CABEÇALHO DE BUSCA */
+#header {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+#search_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 24px;
+    background-color: var(--bg-secondary-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* lado esquerdo do menu */
+#search_field .left {
+    display: flex;
+    justify-items: center;
+    gap: 32px;
+}
+
+#search_field .left .logo-youtube {
+    width: 90px;
+}
+
+/* centro do menu */
+#search_field .center {
+    display: flex;
+    border: 1px solid var(--border-color);
+}
+
+#search_field .center input {
+    width: 348px;
+    padding: 8px;
+    border: none;
+}
+
+#search_field .center .btn-search {
+    background-color: var(--btn-secondary-color);
+    border-left: 1px solid var(--border-color);
+    padding: 8px 19px 8px 14px;
+}
+
+/* lado direito do menu */
+#search_field .right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+/* MENU */
+#menu {
+    background-color: var(--bg-secondary-color);
+    border-right: 1px solid var(--border-color);
+    padding: 24px 0 0 24px;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#menu ul.list_options_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    list-style: none;
+}
+
+#menu li.option-menu {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+li.option-menu p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.41px;
+}
+
+/* LISTA DE VÍDEOS */
+#list_videos {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.grid_videos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 262px);
+    gap: 14px;
+    padding: 24px 24px 0 28px;
+    margin-bottom: 130px;
+}
+
+/* CARD VIDEO */
+.video {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+
+.video .infos-video {
+    display: flex;
+    gap: 10px;
+}
+
+.infos-video .channel-picture {
+    align-self: start;
+}
+
+.description-video h3.title-video {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.41px;
+}
+
+.description-video span.view-video {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.06px;
+    color: var(--text-secondary-color);
+}
+
+/* CLASSES REUTILIZAVEIS */
+.active {
+    font-weight: 700;
+}
