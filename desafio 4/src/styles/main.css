@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+    --primary-color: #23272A;
+    --secondary-color: #FFFFFF;
+
+    --bg-primary-color: #F6F6F6;
+    --bg-secondary-color: #23272A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Open Sans", serif;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    height: 505px;
+
+    background-image: url(../imgs/Header-images/Header_Background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header_content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 26px;
+}
+
+.header_content h1 {
+    font-family: "Luckiest Guy", serif;
+    color: var(--secondary-color);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.header_content p {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 21.79px;
+}
+
+.header_content .buttons_header {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* BUTTONS HEADER */
+button {
+    padding: 16px 0;
+    border-style: none;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 28px;
+}
+
+button#download-windows {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+button#open-browser {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* SECTIONS */
+#section_1,
+#section_2,
+#section_3,
+#section_4 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 27px;
+    padding: 40px 26px;
+
+}
+
+#section_2,
+#section_4 {
+    background-color: var(--bg-primary-color);
+}
+
+/* IMAGENS DA SECTION */
+#section_1 .imagem-section img,
+#section_2 .imagem-section img,
+#section_3 .imagem-section img,
+#section_4 .imagem-section img {
+    max-width: 100%;
+}
+
+/* TEXTOS DAS SEÇÕES */
+#section_1 .text-section,
+#section_2 .text-section,
+#section_3 .text-section,
+#section_4 .text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+
+#section_1 .text-section h2,
+#section_2 .text-section h2,
+#section_3 .text-section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 32.68px;
+    color: var(--primary-color);
+}
+
+#section_4 .text-section h2 {
+    font-family: "Luckiest Guy", serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+#section_1 .text-section p,
+#section_2 .text-section p,
+#section_3 .text-section p,
+#section_4 .text-section p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 21.79px;
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-secondary-color);
+    padding: 44px 0;
+}
+
+/* LOGO DISCORD NO FOOTER */
+footer .logo_container #discord-logo {
+    width: 162px;
+    max-width: 100%;
+    align-self: center;
+}
+
+/* ESTILOS PARA DESKTOP */
+@media screen and (min-width: 1280px) {
+
+    /* HEADER DESKTOP */
+    header {
+        height: 459px;
+        background-image: url(../imgs/Header-images/Header_Background-desktop.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .header_content {
+        align-items: center;
+    }
+
+    .header_content h1 {
+        align-self: center;
+        font-size: 3.5rem;
+        line-height: 3.5rem;
+        text-align: center;
+    }
+
+    .header_content p {
+        text-align: center;
+        width: 757px;
+    }
+
+    .header_content .buttons_header {
+        flex-direction: row;
+    }
+
+    .header_content .buttons_header button {
+        padding: 16px;
+    }
+
+    /* SECTIONS DESKTOP */
+    #section_1,
+    #section_3 {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    #section_2 {
+        flex-direction: row-reverse;
+        justify-content: center;
+    }
+
+    /* CONTAINER DE IMAGEM DA SEÇÃO */
+    #section_1 .imagem-section,
+    #section_2 .imagem-section,
+    #section_3 .imagem-section,
+    #section_4 .imagem-section {
+        min-width: 607px;
+    }
+
+    /* CONTAINER DE TEXTOS DA SEÇÃO */
+    #section_1 .text-section,
+    #section_2 .text-section,
+    #section_3 .text-section {
+        gap: 16px;
+        max-width: 348px;
+    }
+
+    /* TÍTULOS DAS SEÇÕES */
+    #section_1 .text-section h2,
+    #section_2 .text-section h2,
+    #section_3 .text-section h2 {
+        font-size: 2.5rem;
+        line-height: 54.47px;
+    }
+
+    #section_4 .text-section h2 {
+        align-self: center;
+        font-size: 2.5rem;
+        text-align: center;
+        width: 608px;
+    }
+
+    /* PARAGRÁFOS DAS SEÇÕES */
+    #section_4 .text-section p {
+        width: 802px;
+    }
+
+    /* FOOTER DESKTOP*/
+    footer .logo_container #discord-logo {
+        width: 230px;
+    }
+}
