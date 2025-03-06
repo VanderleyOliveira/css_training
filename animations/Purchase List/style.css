@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    background: #c0c0c0;
+    font-family: "Atma", system-ui;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 4rem;
+    color: #222;
+}
+
+.list {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 10px 10px 15px #d3d3d389;
+}
+
+.list li {
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    padding: 12px 32px;
+    transition: background 1s;
+    margin-bottom: 4px;
+}
+
+.list li:hover {
+    background-color: #a3a1a2;
+}
+
+.list input {
+    accent-color: #222;
+}
+
+.list input+span {
+    transition: background 2s, color 2.5s;
+}
+
+.list li:has(input:checked) {
+    background: #f0ab1a;
+    color: #222;
+    border-radius: 4px;
+}
+
+.list li:has(input:checked) input {
+    accent-color: #222;
+}
+
+.list input:checked+span {
+    text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
