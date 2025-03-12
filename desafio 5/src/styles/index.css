@@ -1,0 +1,360 @@
+@import url(./global.css);
+
+/* Header */
+
+.header {
+    position: relative;
+    margin-top: 130px;
+    padding: 100px 0 300px;
+    background: linear-gradient(-45deg, #56125b, #0f0f10, #271e6e);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite alternate;
+}
+
+.header::after {
+    content: "";
+    width: 100%;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+    background: linear-gradient(0deg, var(--primary-color), transparent);
+}
+
+.header__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.header__channels {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+}
+
+.header__channel {
+    object-fit: contain;
+}
+
+.header__title {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.header__title--light {
+    display: block;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+
+.divider {
+    width: 70%;
+    max-width: 700px;
+    height: 5px;
+    background: var(--divider-bg-color);
+}
+
+.oferta {
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.oferta__preco {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.oferta__preco--small {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.header__button {
+    animation: wiggle 2.2s linear infinite;
+}
+
+.header .text--small {
+    max-width: 300px;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* Section de Planos */
+
+#planos {
+    background: url(../imgs/background-movies-series.png) no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 24px;
+    text-align: center;
+}
+
+.planos__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 40px;
+    margin: 40px 0;
+
+    /* configuração necessária para rotação de cards */
+    perspective: 2000px;
+    perspective-origin: top;
+}
+
+/* Cards de planos */
+
+.plano__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 40px;
+    min-height: 600px;
+    border-radius: 8px;
+    background: var(--card-bg-color);
+    transition: transform 1s ease-in-out;
+}
+
+.descricao_plano {
+    margin-bottom: 16px;
+}
+
+.descricao_plano h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.descricao_plano p.descricao_preco {
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: "Raleway", sans-serif;
+}
+
+.vantagem {
+    font-size: 1rem;
+    text-align: left;
+    list-style: none;
+    margin-bottom: 14px;
+    padding-left: 14px;
+}
+
+.vantagem::marker {
+    content: "+";
+    font-size: 2rem;
+    margin-right: 8px;
+}
+
+/* Rotação de card com hover e transform */
+
+.planos__container:has(.plano__card:nth-child(1):hover) .plano__card:nth-child(2) {
+    transform: rotateY(-45deg);
+}
+
+.planos__container:has(.plano__card:nth-child(2):hover) .plano__card:nth-child(1) {
+    transform: rotateY(45deg);
+}
+
+/* Séries e Filmes Container */
+
+#contents {
+    margin: 100px auto;
+    padding: 24px;
+    max-width: 1200px;
+}
+
+.contents__container {
+    display: grid;
+    grid-template-columns: repeat(6, 100%);
+    grid-auto-flow: column;
+    overflow: auto hidden;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contents__card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px;
+    border: 2px solid transparent;
+    transition: transform 0.8s, background 0.8s, border 1s;
+}
+
+.contents__card:hover {
+    transform: scale(1.05);
+    border: 2px solid var(--tertiary-color);
+}
+
+.contents__card:hover .contents__image {
+    opacity: 0;
+}
+
+.contents__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 2s;
+}
+
+/* HBO Content */
+
+.contents__card:nth-child(1):hover {
+    background-image: url("../imgs/hbo-hover_0.webp");
+}
+
+/* Max Originals Content */
+
+.contents__card:nth-child(2):hover {
+    background-image: url("../imgs/MAX-Hover.webp");
+}
+
+/* DC Content */
+
+.contents__card:nth-child(3):hover {
+    background-image: url("../imgs/DC-Hover.webp");
+}
+
+/* WB Content */
+
+.contents__card:nth-child(4):hover {
+    background-image: url("../imgs/WB-Hover.webp");
+}
+
+/* CN Content */
+
+.contents__card:nth-child(5):hover {
+    background-image: url("../imgs/CN-Hover.png");
+}
+
+/* Champions League Content */
+
+.contents__card:nth-child(6):hover {
+    background-image: url("../imgs/UCL-Hover.webp");
+}
+
+/* Medias Queries */
+
+@media screen and (min-width: 481px) {
+    .header {
+        margin-top: 54px;
+    }
+
+    .planos__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plano__card {
+        max-width: 600px;
+    }
+
+    .descricao_plano {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .descricao_plano p.descricao_preco {
+        font-size: 2rem;
+    }
+
+    .vantagem {
+        font-size: 1.25rem;
+    }
+
+    .contents__container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-flow: row;
+        overflow: visible;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 801px) {
+    .contents__container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-flow: row;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1141px) {
+    .planos__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contents__container {
+        gap: 32px;
+    }
+}
+
+@media (pointer: coarse) {
+    .contents__card:hover {
+        transform: none;
+    }
+
+    .planos__container:has(.plano__card:nth-child(1):hover) .plano__card:nth-child(2),
+    .planos__container:has(.plano__card:nth-child(2):hover) .plano__card:nth-child(1) {
+        transform: none;
+    }
+}
+
+/* Animações */
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes wiggle {
+
+    0%,
+    10% {
+        transform: rotate(0);
+    }
+
+    15% {
+        transform: rotate(-15deg);
+    }
+
+    20% {
+        transform: rotate(10deg);
+    }
+
+    25% {
+        transform: rotate(-10deg);
+    }
+
+    30% {
+        transform: rotate(10deg);
+    }
+
+    35% {
+        transform: rotate(-10deg);
+    }
+
+    40%,
+    100% {
+        transform: rotate(0);
+    }
+}
